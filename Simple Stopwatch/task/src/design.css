@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "Seven Segments";
+    src: url("Seven Segment.ttf");
+}
+#watch {
+    border-radius: 50%;
+    border-style: ridge;
+    background-color: black;
+    aspect-ratio: 1;
+    color: green;
+    display: grid;
+    width: 10rem;
+    grid-template-areas: "lt t rt" "timer timer timer" "lb b rb";
+    grid-template-columns: repeat(3, auto);
+    place-items: center;
+    #top, #bottom {
+        font-family: serif;
+        color: white;
+        font-size: smaller;
+    }
+    #top {
+        grid-area: t;
+    }
+    #bottom {
+        grid-area: b;
+    }
+    button {
+        overflow: hidden;
+    }
+    #start {
+        grid-area: lt;
+        rotate: -45deg;
+    }
+    #stop {
+        grid-area: lb;
+        rotate: -135deg;
+    }
+    #reset {
+        grid-area: rt;
+        rotate: 45deg;
+    }
+    #lap {
+        grid-area: rb;
+        rotate: 135deg;
+    }
+    #timer {
+        grid-area: timer;
+        font-size: 2rem;
+    }
+}
+html {
+    font-family: "Seven Segments", monospace;
+}
